@@ -1,14 +1,18 @@
+import * as React from 'react';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles'
 import './App.css';
 import CustomBtn from './components/customBtn';
 import NavBar from './components/navBar';
 import CssBaseline from "@material-ui/core/CssBaseline";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import ATCalendar from './ATCalendar';
-import Recording from './Recording';
-import Rehearsal from './Rehearsal';
-import EditAndCollab from './EditAndCollab';
-import Drawer from './components/drawer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import home from './pages/home';
+import schedules from './pages/schedules'
+import gear from './pages/gear'
+import contact from './pages/contact'
+
+
+
 
 
 const theme = createTheme({
@@ -40,15 +44,8 @@ const theme = createTheme({
 });
 
 
-const useStyles = makeStyles({
-  container: {
-    display: "flex"
-  }
-});
-
-
 function App() {
-  const classes = useStyles();
+
   return (
 
     <Router>
@@ -56,19 +53,15 @@ function App() {
       
       <ThemeProvider theme={theme}>
 
-      <div className={classes.container}>
-       <Drawer/>
-      </div>
+       <NavBar/>
+        
         <Switch>
-          <Route path = "/" exact component={ATCalendar}/>
-          <Route path = "/Recording" exact component={Recording}/>
-          <Route path = "/Rehearsal" exact component={Rehearsal}/>
-          <Route path = "/EditAndCollab" exact component={EditAndCollab}/>
+          <Route path = "/" exact component={home}/>
+          <Route path = "/schedules" exact component={schedules}/>
+          <Route path = "/gear" exact component={gear}/>
+          <Route path = "/contact" exact component={contact}/>
         </Switch>
-      
-      
-      
-
+    
       </ThemeProvider>
       
       </div>

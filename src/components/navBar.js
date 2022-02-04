@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 const styles = makeStyles({
     bar:{
         paddingTop: "0.40rem",
-        backgroundColor: "#42424",
+        backgroundColor: "#2A2A31",
         ['@media (max-width:780px)']: { 
            flexDirection: "column"
           }
@@ -51,22 +51,22 @@ function NavBar() {
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
                 <NavLink exact to='/' className="main-nav" activeClassName="main-nav-active">
-                    <CustomBtn txt="View Calendar"/>                   
+                    <CustomBtn txt="Book Rooms"/>                   
                 </NavLink>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                
 
-                <NavLink to='/Recording' className="main-nav" activeClassName="main-nav-active" >
-                    <CustomBtn txt="Book Recording Studio"/>
+                <NavLink to='/schedules' className="main-nav" activeClassName="main-nav-active" >
+                    <CustomBtn txt="Room Schedules"/>
                 </NavLink>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                
 
-                <NavLink to='/Rehearsal' className="main-nav" activeClassName="main-nav-active">
-                    <CustomBtn txt="Book Rehearsal Spaces"/>
+                <NavLink to='/gear' className="main-nav" activeClassName="main-nav-active">
+                    <CustomBtn txt="Gear Checkout"/>
                 </NavLink>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                
 
-                <NavLink to='/EditAndCollab' className="main-nav" activeClassName="main-nav-active">
-                    <CustomBtn txt="Book Edit and Collab Spaces"/>
+                <NavLink to='/contact' className="main-nav" activeClassName="main-nav-active">
+                    <CustomBtn txt="Contact Us"/>
                 </NavLink>
 
             </Toolbar>
