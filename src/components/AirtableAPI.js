@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 
 //Needs to be integrated with other forms
 
-const base = new Airtable({apiKey: "keyn6GGT4mwqMtlaF"}).base('appw5uy7KwYsJqmBr')
+const base = new Airtable({apiKey}).base('appw5uy7KwYsJqmBr')
 
 function AirtableAPI() {
 
     useEffect(() => {
-      base("Events")
+      base("Events") 
         .select()
         .eachPage((records, fetchNextPage) =>{
             console.log(records);
